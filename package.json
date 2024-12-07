@@ -1,0 +1,43 @@
+{
+  "name": "az-forms",
+  "version": "0.0.6",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "main": "./dist/az-forms.js",
+  "module": "./dist/az-forms.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/az-forms.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*.d.ts"
+    },
+    "./types/*": {
+      "types": "./dist/types/*.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": "^3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1",
+    "vite-plugin-dts": "^4.3.0",
+    "vue-tsc": "^2.1.10"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
